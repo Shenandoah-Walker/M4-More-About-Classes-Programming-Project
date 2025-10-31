@@ -119,3 +119,45 @@ void Date::printDate2() const {
 void Date::printDate3() const {
   cout << day << " " << monthName() << " " << year << endl;
 }
+
+//Prefix increment operator
+Date& Date::operator++() {
+  day++;
+  if (day > lastDay()) {
+    day = 1;
+    month++;
+    if (month > 12) {
+      month = 1;
+      year++;
+    }
+  }
+  return *this;
+};
+
+//Postfix increment operator
+Date Date::operator++(int) {
+  Date temporaryDate = *this;
+  ++(*this);
+  return temporaryDate;
+}
+
+//Prefix decrement operator
+Date& Date::operator--() {
+  day--;
+  if (day < 1) {
+    month--;
+    if (month < 1) {
+      month = 12;
+      year--;
+    }
+    day = lastDay();
+  }
+  return *this;
+};
+
+//Postfix decrement operator
+Date Date::operator--(int) {
+  Date temporaryDate = *this;
+  --(*this);
+  return temporaryDate;
+};

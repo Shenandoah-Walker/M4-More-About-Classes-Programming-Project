@@ -100,6 +100,7 @@ int main() {
   cout << "Enter a date (mm/dd/yyyy): ";
   cin >> date1;
   cout << "You entered: " << date1 << endl;
+  cout << "Note: If the date is invalid, 1/1/1900 will be printed.";
 
   
   return 0;

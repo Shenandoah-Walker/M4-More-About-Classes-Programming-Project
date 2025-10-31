@@ -170,8 +170,22 @@ int Date::operator-(const Date& other) const {
     temporaryDate--;
     days++;
   }
-  return days;
-}
+
+  if (days > 0) {
+    return days;
+  }
+
+  else if (days < 0) {
+    return -days;
+  }
+
+  else {
+    days = 0;
+    return days;
+  }
+  
+};
+
 
 //<< operator
 ostream& operator<<(ostream& out, const Date& date) {

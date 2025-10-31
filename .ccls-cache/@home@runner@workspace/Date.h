@@ -113,6 +113,19 @@ public:
   */
   void printDate3() const;
 
+  //Overloading prefix and postfix ++ and -- operators
+  Date& operator++();
+  Date operator++(int);
+  Date& operator--();
+  Date operator--(int);
+
+  //Overloading subtraction operator
+  int operator-(const Date& rhs) const;
+
+  //Overloading << and >> operators
+  friend ostream& operator<<(ostream& out, const Date& date);
+  friend istream& operator>>(istream& in, Date& date);
+
 };
 
 

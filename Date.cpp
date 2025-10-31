@@ -161,3 +161,28 @@ Date Date::operator--(int) {
   --(*this);
   return temporaryDate;
 };
+
+//Subtraction operator
+int Date::operator-(const Date& other) const {
+  int days = 0;
+  Date temporaryDate = *this;
+  while (temporaryDate.day != other.day || temporaryDate.month != other.month || temporaryDate.year != other.year) {
+    temporaryDate--;
+    days++;
+  }
+  return days;
+}
+
+//<< operator
+ostream& operator<<(ostream& out, const Date& date) {
+  date.printDate2();
+  return out;
+}
+
+//>> operator
+istream& operator>>(istream& in, Date& date) {
+  int month, day, year;
+  in >> month >> day >> year;
+  date.setDate(month, day, year);
+  return in;
+}

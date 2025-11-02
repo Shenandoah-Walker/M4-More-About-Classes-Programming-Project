@@ -97,7 +97,7 @@ int main() {
   cout << endl;
 
   //Use cin and the >> operator to read a date typed in at the keyboard.
-  cout << "Enter a date (mm/dd/yyyy): ";
+  cout << "Enter a date (mm dd yyyy): ";
   cin >> date1;
   cout << "You entered: " << date1 << endl;
   cout << "Note: If the date is invalid, 1/1/1900 will be printed.";

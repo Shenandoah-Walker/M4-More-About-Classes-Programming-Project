@@ -20,6 +20,7 @@ int main() {
 
   else {
     cout << "Car is parked legally." << endl;
+    cout << endl;
   }
 
   // Scenario 2: A Car Is Parked Illegally (Less Than an Hour Over Time)

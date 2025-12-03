@@ -37,6 +37,7 @@ void ParkingTicket::printTicket() const {
     cout << "Meter Minutes: " << minutesPurchased
          << " Minutes Parked: " << minutesParked << endl;
     cout << "Parking Fee: $" << fixed << setprecision(2) << fine << endl;
+    cout << endl;
 }
 
 int ParkingTicket::getMinutesIllegallyParked() const { return minutesIllegallyParked; }

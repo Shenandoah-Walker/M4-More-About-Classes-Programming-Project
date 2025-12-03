@@ -9,7 +9,7 @@ class PoliceOfficer;
 class ParkingTicket {
 private:
     ParkedCar car;
-    PoliceOfficer officer;
+    const PoliceOfficer& officer;
     double fine;
     int minutesIllegallyParked;
     int minutesPurchased;

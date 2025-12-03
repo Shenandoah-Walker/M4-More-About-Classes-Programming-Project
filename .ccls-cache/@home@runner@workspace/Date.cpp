@@ -166,7 +166,7 @@ Date Date::operator--(int) {
 int Date::operator-(const Date& other) const {
   int days = 0;
   Date temporaryDate = *this;
-  
+
   if (temporaryDate.year > other.year || 
     (temporaryDate.year == other.year && temporaryDate.month > other.month) || 
     (temporaryDate.year == other.year && temporaryDate.month == other.month && temporaryDate.day > other.day)) {
@@ -188,17 +188,12 @@ int Date::operator-(const Date& other) const {
   }
   }  
 
-  if (days > 0) {
+  if (days >= 0) {
     return days;
-  }
-
-  else if (days < 0) {
-    return -days;
   }
 
   else {
-    days = 0;
-    return days;
+    return -days;
   }
   
 };

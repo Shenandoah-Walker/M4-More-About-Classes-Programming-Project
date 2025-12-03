@@ -23,11 +23,10 @@ string PoliceOfficer::getBadgeNumber() const {
   return badgeNumber;
 }
 
-bool PoliceOfficer::isExpired(ParkedCar car, ParkingMeter meter) const {
+bool PoliceOfficer::isExpired(const ParkedCar& car, const ParkingMeter& meter) const {
   return car.getMinutesParked() > meter.getMinutesPurchased();
 }
 
-ParkingTicket PoliceOfficer::issueTicket(ParkedCar car, ParkingMeter meter) const {
-  ParkingTicket ticket(car, *this, meter.getMinutesPurchased(), car.getMinutesParked());
-  return ticket;
+ParkingTicket PoliceOfficer::issueTicket(const ParkedCar& car, const ParkingMeter& meter) const {
+  return ParkingTicket(car, *this, meter.getMinutesPurchased(), car.getMinutesParked());
 }

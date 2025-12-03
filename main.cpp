@@ -12,6 +12,7 @@ int main() {
   ParkedCar car1("Toyota", "Camry", "Red", "XYZ123", 30);
   ParkingMeter meter1(40);
   PoliceOfficer officer1("John Doe", "5678");
+  
   if (officer1.isExpired(car1, meter1)) {
     ParkingTicket ticket1 = officer1.issueTicket(car1, meter1);
     ticket1.printTicket(); 
@@ -32,7 +33,7 @@ int main() {
     else {
       cout << "Car is parked legally." << endl;
       }
-    }
+    
 
   // Scenario 3: A Car Is Parked Illegally (Multiple Hours Over Time)
   ParkedCar car3("Ford", "Mustang", "Black", "LMN456", 190);
@@ -45,7 +46,7 @@ int main() {
     else {
       cout << "Car is parked legally." << endl;
     }
-}
+
 
    // Scenario 4: Multiple Cars in a Parking Lot
   ParkedCar car4("Chevrolet", "Impala", "White", "DEF654", 120);
@@ -72,6 +73,5 @@ int main() {
 
   return 0;
 
-    
-  
+    }
   

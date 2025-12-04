@@ -9,12 +9,12 @@ public:
 
 /*
 Constructor: ParkingMeter
-Purpose: To initialize the data members of the ParkingMeter class.
+Purpose: To initialize the minutes purchased.
 Parameters:
  - int minutesPurchased
 Returns: None
 Preconditions: None
-Postconditions: The data members of the ParkingMeter class are initialized.
+Postconditions: The minutes purchased is initialized.
 */
 ParkingMeter(int minutesPurchased) : minutesPurchased(minutesPurchased) {}
 

@@ -52,25 +52,48 @@ int main() {
    // Scenario 4: Multiple Cars in a Parking Lot
   ParkedCar car4("Chevrolet", "Impala", "White", "DEF654", 120);
   ParkingMeter meter4(60);
-  PoliceOfficer officer4("Alice Johnson", "8765");
+  PoliceOfficer officer4("Bob Smith", "2468");
   if (officer4.isExpired(car4, meter4)) {
     ParkingTicket ticket4 = officer4.issueTicket(car4, meter4);
     ticket4.printTicket();
     }
     else {
       cout << "Car is parked legally." << endl;
+      cout << endl;
       }
 
   ParkedCar car5("Nissan", "Altima", "Gray", "GHI321", 90);
   ParkingMeter meter5(60);
-  PoliceOfficer officer5("Bob Smith", "2468");
-  if (officer5.isExpired(car5, meter5)) {
-    ParkingTicket ticket5 = officer5.issueTicket(car5, meter5);
+  if (officer4.isExpired(car5, meter5)) {
+    ParkingTicket ticket5 = officer4.issueTicket(car5, meter5);
     ticket5.printTicket();
     }
     else {
       cout << "Car is parked legally." << endl;
+      cout << endl;
       }
+
+  ParkedCar car6("Ford", "Focus", "Blue", "JIK123", 10);
+  ParkingMeter meter6(60);
+  if (officer4.isExpired(car6, meter6)) {
+    ParkingTicket ticket6 = officer4.issueTicket(car6, meter6);
+    ticket6.printTicket();
+    }
+    else {
+      cout << "Car is parked legally." << endl;
+      cout << endl;
+      }
+
+   ParkedCar car7("Toyota", "Corolla", "Red", "MNO456", 15);
+  ParkingMeter meter7(30);
+  if (officer4.isExpired(car7, meter7)) {
+    ParkingTicket ticket7 = officer4.issueTicket(car7, meter7);
+    ticket7.printTicket();
+  }
+  else{
+    cout << "Car is parked legally." << endl;
+    cout << endl;
+  } 
 
   return 0;
 
